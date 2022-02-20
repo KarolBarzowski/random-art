@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background-color 0.6s ease-in-out;
+  font-family: "Inter", sans-serif;
+  cursor: none;
+}
+
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 65px 0 25px;
+  margin: auto;
+  transition: height 0.6s ease-in-out;
+}
+
+.image {
+  object-fit: contain;
+  max-width: 843px;
+  max-height: 843px;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.aboutWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 300px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(100%);
+  transition: transform 0.6s ease-in-out;
+  padding: 50px 100px;
+  gap: 50px;
+}
+
+span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.row > div {
+  width: 50%;
+}
+
+.reloadIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  animation: rotate 1s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.half {
+  height: calc(100vh - 300px);
+}
+
+.visible {
+  transform: translateY(0);
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.headingWrapper {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.controlsWrapper {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 64px;
+  width: 64px;
+  mix-blend-mode: difference;
+}
+
+.cursorInner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid silver;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
