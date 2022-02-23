@@ -13,16 +13,24 @@
   <body>
     <div id="app">
       <div class="headingWrapper">
-        <h1 class="heading" id="heading"></h1>
+        <a class="heading" id="heading" target="_blank"></a>
         <p class="caption" id="artist"></p>
-      </div>
-      <div class="controlsWrapper">
-        <p class="caption" id="click">click anywhere to show details</p>
-        <p class="caption" id="wheel">use mouse wheel to change art</p>
+        <p class="caption" id="type"></p>
       </div>
     </div>
+    <div class="controlsWrapper">
+      <button type="button">Painting</button>
+      <button type="button">Photograph</button>
+      <button type="button">Sculpture</button>
+      <button type="button">Architectural Drawing</button>
+      <button type="button">Drawing and Watercolor</button>
+      <button type="button">Print</button>
+    </div>
+    <div class="next">
+      <button type="button" id="next">Next art</button>
+    </div>
     <div class="cursor">
-      <span class="cursorInner"></span>
+      <span class="cursorInner scaleOut"></span>
     </div>
     <script src="app.js"></script>
   </body>
